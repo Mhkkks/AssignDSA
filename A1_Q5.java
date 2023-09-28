@@ -2,27 +2,19 @@ package assignment.numbers;
 
 import java.util.Scanner;
 
-public class PrimeN {
+public class CountDigits {
 
 	public static void main(String[] args) {
+
+		System.out.print("Enter your number:");
 		Scanner scn = new Scanner(System.in);
 
 		int n = scn.nextInt();
-
-		Mehak: for (int j = 3; j <= n; j++)
-
-		{
-			for (int i = 2; i < j; i++) {
-				if (j % i == 0) {
-					// System.out.print("not prime");
-					continue Mehak;
-				}
-			}
-			{
-				System.out.println(j + " is prime");
-
-			}
+		int j = 0;
+		for (int i = 1; n / i >= 1; i = i * 10) {
+			j++;
 		}
+		System.out.print("Number of digits in " + n + " is " + j);
 
 		scn.close();
 	}
